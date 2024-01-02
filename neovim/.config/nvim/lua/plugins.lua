@@ -60,6 +60,10 @@ return {
 	--
 	{ "xiyaowong/transparent.nvim" },
 
+	-- nvim-web-devicons (https://github.com/nvim-tree/nvim-web-devicons)
+	--
+	{ "nvim-tree/nvim-web-devicons" },
+
 	-------------------------------------------------------
 	-- LSP and Formatting
 	-------------------------------------------------------
@@ -96,6 +100,14 @@ return {
 	-- conform (https://github.com/stevearc/conform.nvim)
 	--
 	{ "stevearc/conform.nvim", opts = {} },
+
+	-------------------------------------------------------
+	-- Git helpers
+	-------------------------------------------------------
+
+	-- Diffview (https://github.com/sindrets/diffview.nvim)
+	--
+	{ "https://github.com/sindrets/diffview.nvim" },
 
 	-------------------------------------------------------
 	-- AI Coding
