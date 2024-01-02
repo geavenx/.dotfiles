@@ -37,7 +37,7 @@ To use these dotfiles on your system, follow these steps:
     cd ~/.dotfiles
     ```
 
-3. **OR use the Makefile (alternative method):**
+3. **Using the Makefile:**
     If you prefer using the Makefile for linking your dotfiles, you can run:
     ```bash
     make all
