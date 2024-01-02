@@ -56,6 +56,10 @@ return {
 	--
 	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 
+	-- Transparent (https://github.com/xiyaowong/transparent.nvim)
+	--
+	{ "xiyaowong/transparent.nvim" },
+
 	-------------------------------------------------------
 	-- LSP and Formatting
 	-------------------------------------------------------

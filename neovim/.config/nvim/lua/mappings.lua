@@ -14,3 +14,5 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "scroll down keeping the cursor
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "scroll up keeping the cursor on the center" })
 
 vim.keymap.set("n", "<leader>x", "<cmd>:bd<CR>", { desc = "close buffer" })
+
+vim.keymap.set("n", "<C-t>", "<cmd>:TransparentToggle<CR>", { desc = "toggle transparency" })
