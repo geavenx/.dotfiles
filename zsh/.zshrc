@@ -4,7 +4,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.local/bin:$HOME/.scripts:$HOME
 # Oh-my-zsh path
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
-plugins=(git tmux)
+
+# Plugins
+plugins=(git tmux alias-finder git-prompt command-not-found sudo zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -34,3 +36,5 @@ eval "$(pyenv init -)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
+
+export PATH=$PATH:/home/vitor/.spicetify
