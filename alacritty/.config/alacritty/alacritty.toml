@@ -2,10 +2,6 @@ import = [
     "~/.config/alacritty/themes/themes/kanagawa_wave.toml"
 ]
 
-[shell]
-program = "/bin/zsh"
-args = [ "-l", "-c", "tmux attach || tmux" ]
-
 [colors.bright]
 black = "0xa6accd"
 blue = "0xadd7ff"
