@@ -29,7 +29,7 @@ To use these dotfiles on your system, follow these steps:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/dotfiles.git ~/.dotfiles
+    git clone https://github.com/geavenx/dotfiles.git ~/.dotfiles
     ```
 
 2. **Navigate to the dotfiles directory:**
@@ -38,7 +38,7 @@ To use these dotfiles on your system, follow these steps:
     ```
 
 3. **Using the Makefile:**
-    If you prefer using the Makefile for linking your dotfiles, you can run:
+    If you want to use stow for linking your dotfiles, you can run the makefile:
     ```bash
     make all
     ```
