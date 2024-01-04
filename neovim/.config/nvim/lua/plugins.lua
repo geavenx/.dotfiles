@@ -27,6 +27,9 @@ return {
 		build = ":TSUpdate",
 	},
 
+	-- FTerm (https://github.com/numToStr/FTerm.nvim)
+	--
+
 	{ "numToStr/FTerm.nvim" },
 
 	-------------------------------------------------------
