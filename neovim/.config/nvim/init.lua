@@ -26,10 +26,6 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
---  Bufferline specific
-vim.opt.termguicolors = true
-require("bufferline").setup({})
-
 -----------------------------------------------------
 -- Colorscheme
 -----------------------------------------------------
