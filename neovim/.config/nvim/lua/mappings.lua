@@ -17,4 +17,4 @@ vim.keymap.set("n", "<leader>x", "<cmd>:bd<CR>", { desc = "close buffer" })
 
 vim.keymap.set("n", "<C-t>", "<cmd>:TransparentToggle<CR>", { desc = "toggle transparency" })
 
-vim.keymap.set("x", "<leader>p", [[\"_dP]], { desc = "<p>aste overwriting * not yanking" })
+vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "<p>aste overwriting * not yanking" })
