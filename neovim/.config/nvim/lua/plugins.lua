@@ -112,6 +112,10 @@ return {
 	--
 	{ "https://github.com/sindrets/diffview.nvim" },
 
+	-- vim-fugitive (https://github.com/tpope/vim-fugitive)
+	--
+	{ "tpope/vim-fugitive" },
+
 	-------------------------------------------------------
 	-- AI Coding
 	-------------------------------------------------------
