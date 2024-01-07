@@ -1,5 +1,5 @@
 # Path
-export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.local/bin:$HOME/.scripts:$HOME/.appimages:/usr/local/go/bin
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.scripts:$HOME/.appimages:/usr/local/go/bin:$HOME/go/bin:$PATH
 
 # Oh-my-zsh path
 export ZSH="$HOME/.oh-my-zsh"
