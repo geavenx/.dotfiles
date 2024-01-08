@@ -16,3 +16,6 @@ alias v='nvim.appimage .'
 
 # Tmux
 alias trs='tmux rename-session'
+
+# Docker
+alias containerip='docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}''
