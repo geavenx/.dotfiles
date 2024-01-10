@@ -38,6 +38,3 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # spicetify
 export PATH=$PATH:/home/vitor/.spicetify
-
-# Syntax highlighting plugin
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
