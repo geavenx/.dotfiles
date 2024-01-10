@@ -38,3 +38,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # spicetify
 export PATH=$PATH:/home/vitor/.spicetify
+
+# zoxide
+eval "$(zoxide init zsh)"
