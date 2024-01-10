@@ -47,8 +47,8 @@ cursor = "CellForeground"
 text = "CellBackground"
 
 [cursor]
-style = "Underline"
-vi_mode_style = "Underline"
+style = "Block"
+vi_mode_style = "Block"
 
 
 [font]
@@ -78,7 +78,7 @@ multiplier = 3
 
 [window]
 startup_mode = "Maximized"
-opacity = 0.9
+opacity = 0.7
 
 [window.dimensions]
 columns = 80
