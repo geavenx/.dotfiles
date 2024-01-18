@@ -41,3 +41,10 @@ export PATH=$PATH:/home/vitor/.spicetify
 
 # zoxide
 eval "$(zoxide init zsh)"
+
+# pnpm
+export PNPM_HOME="/home/vitor/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
