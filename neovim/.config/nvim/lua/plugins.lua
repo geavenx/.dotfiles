@@ -93,7 +93,7 @@ return {
 	{
 		"L3MON4D3/LuaSnip",
 		dependencies = { "rafamadriz/friendly-snippets" },
-		tag = "v2.*",
+		version = "v2.*",
 		run = "make install_jsregexp",
 	},
 
