@@ -14,7 +14,6 @@ require("conform").setup({
 		toml = { "prettier" },
 		rust = { "rustfmt" },
 		go = { "gofmt" },
-		sql = { "sqlfmt" },
 	},
 	format_on_save = {
 		lsp_fallback = true,
