@@ -33,7 +33,7 @@ multiplier = 3
 
 [window]
 startup_mode = "Maximized"
-opacity = 0.9
+opacity = 1
 
 [window.dimensions]
 columns = 80
