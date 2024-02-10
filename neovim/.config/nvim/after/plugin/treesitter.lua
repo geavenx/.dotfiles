@@ -9,6 +9,8 @@ require("nvim-treesitter.configs").setup({
 		"typescript",
 		"javascript",
 		"html",
+		"c",
+		"cpp",
 	},
 	sync_install = false,
 	highlight = { enable = true },

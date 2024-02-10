@@ -29,7 +29,7 @@ cmp.setup({
 	},
 })
 
-local lsp_zero = require("lsp-zero") --.preset({})
+local lsp_zero = require("lsp-zero")
 
 lsp_zero.on_attach(function(client, bufnr)
 	lsp_zero.default_keymaps({ buffer = bufnr })
@@ -53,6 +53,7 @@ require("mason-lspconfig").setup({
 		"gopls",
 		"lua_ls",
 		"tsserver",
+		"clangd",
 	},
 	handlers = {
 		lsp_zero.default_setup,
