@@ -35,7 +35,7 @@ lsp_zero.on_attach(function(client, bufnr)
 	lsp_zero.default_keymaps({ buffer = bufnr })
 end)
 
--- MANUALLY INSTALL FORMATTERS = STYLUA, BLACK, PRETTIERD, RUSTFMT, GOFUMPT
+-- MANUALLY INSTALL FORMATTERS = STYLUA, BLACK, PRETTIERD, RUSTFMT, GOFUMPT, CODELLDB
 require("mason").setup({
 	ui = {
 		icons = {

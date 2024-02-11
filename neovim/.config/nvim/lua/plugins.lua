@@ -144,4 +144,28 @@ return {
 	-- Kanagawa (https://github.com/rebelot/kanagawa.nvim)
 	--
 	{ "rebelot/kanagawa.nvim" },
+
+	-------------------------------------------------------
+	-- colorschemes
+	-------------------------------------------------------
+
+	-- Nvim-dap (https://github.com/mfussenegger/nvim-dap)
+	--
+	{ "mfussenegger/nvim-dap" },
+
+	-- Mason-nvim-dap (https://github.com/jay-babu/mason-nvim-dap.nvim)
+	--
+	{
+		"jay-babu/mason-nvim-dap.nvim",
+		dependencies = { "williamboman/mason.nvim", "mfussenegger/nvim-dap" },
+		event = "VeryLazy",
+	},
+
+	-- Nvim-dap-ui (https://github.com/rcarriga/nvim-dap-ui)
+	--
+	{
+		"rcarriga/nvim-dap-ui",
+		dependencies = { "mfussenegger/nvim-dap" },
+		event = "VeryLazy",
+	},
 }
