@@ -14,6 +14,7 @@ require("conform").setup({
 		toml = { "prettier" },
 		rust = { "rustfmt" },
 		go = { "gofmt" },
+		cpp = { "clang-format" },
 	},
 	format_on_save = {
 		lsp_fallback = true,
