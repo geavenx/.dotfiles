@@ -6,14 +6,10 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 
--- For example, changing the color scheme:
--- config.color_scheme = "Batman"
+-- Changing color scheme to be the same as neovim
+config.color_scheme = "Tokyo Night Moon"
 
--- Set background to same color as neovim
-config.colors = {}
-config.colors.background = "#111111"
-
--- default is true, has more "native" look
+-- Default is true, has more "native" look
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 
