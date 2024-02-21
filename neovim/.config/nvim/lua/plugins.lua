@@ -145,8 +145,17 @@ return {
 	--
 	{ "rebelot/kanagawa.nvim" },
 
+	-- Tokyonight (https://github.com/folke/tokyonight.nvim)
+	--
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+
 	-------------------------------------------------------
-	-- colorschemes
+	-- Debugging
 	-------------------------------------------------------
 
 	-- Nvim-dap (https://github.com/mfussenegger/nvim-dap)
