@@ -6,7 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 # Plugins
-plugins=(git tmux alias-finder git-prompt command-not-found sudo zsh-syntax-highlighting)
+plugins=(git tmux alias-finder git-prompt command-not-found sudo zsh-syntax-highlighting archlinux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -48,3 +48,10 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# android SDK env variables
+export ANDROID_HOME=/home/vitor/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
