@@ -60,7 +60,7 @@ To customize these dotfiles for your own use:
 
 - Edit the specific configuration files in each tool's directory.
 - Add or remove configurations as needed.
-- Feel free to create a new branch for your customizations to keep the master branch clean.
+- Feel free to create a new fork for your customizations.
 
 ## Contributing
 
