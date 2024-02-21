@@ -1,3 +1,3 @@
 neovim/.config/nvim/lazy-lock.json
 
-./alacritty/*
+alacritty/*
