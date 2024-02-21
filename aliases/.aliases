@@ -11,6 +11,7 @@ alias aptins='sudo apt update && sudo apt install'
 alias vims='nvim.appimage -S'
 alias ipchecker='python /home/vcardoso/.scripts/ip_check.py'
 alias v='nvim .'
+alias storage='du -h --max-depth=1 . | sort -h'
 
 # Tmux
 alias trs='tmux rename-session'
