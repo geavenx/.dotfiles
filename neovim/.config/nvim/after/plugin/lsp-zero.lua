@@ -35,7 +35,7 @@ lsp_zero.on_attach(function(client, bufnr)
 	lsp_zero.default_keymaps({ buffer = bufnr })
 end)
 
--- MANUALLY INSTALL FORMATTERS = STYLUA, BLACK, PRETTIERD, RUSTFMT, GOFUMPT, CODELLDB
+-- MANUALLY INSTALL FORMATTERS = STYLUA, BLACK, PRETTIERD, RUSTFMT, GOFUMPT
 require("mason").setup({
 	ui = {
 		icons = {
@@ -46,16 +46,25 @@ require("mason").setup({
 	},
 })
 
+local ensure_installed = vim.tbl_keys({})
+vim.list_extend(ensure_installed, {
+	-- LSPs
+	"pyright",
+	"gopls",
+	"lua_ls",
+	"tsserver",
+	"clangd",
+	"rust_analyzer",
+
+	-- Formatters
+	"stylua",
+	"black",
+	"prettierd",
+	"gofumpt",
+})
+require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+
 require("mason-lspconfig").setup({
-	ensure_installed = {
-		-- LSPs
-		"pyright",
-		"gopls",
-		"lua_ls",
-		"tsserver",
-		"clangd",
-		"rust_analyzer",
-	},
 	handlers = {
 		lsp_zero.default_setup,
 	},

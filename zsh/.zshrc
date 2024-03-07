@@ -1,6 +1,9 @@
 # Path
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.scripts:$HOME/.appimages:/usr/local/go/bin:$HOME/go/bin:$PATH
 
+# Set EDITOR env var
+EDITOR=vim
+
 # Oh-my-zsh path
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
