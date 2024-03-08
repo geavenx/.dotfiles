@@ -9,7 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 # Plugins
-plugins=(git tmux alias-finder git-prompt command-not-found sudo zsh-syntax-highlighting archlinux)
+plugins=(git tmux alias-finder git-prompt command-not-found sudo archlinux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,7 +39,6 @@ eval "$(pyenv init -)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# spicetify
 export PATH=$PATH:/home/vitor/.spicetify
 
 # zoxide
@@ -58,3 +57,6 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# zsh-syntax-highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
