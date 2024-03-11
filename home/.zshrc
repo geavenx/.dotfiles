@@ -1,5 +1,5 @@
 # Path
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.scripts:$HOME/.appimages:/usr/local/go/bin:$HOME/go/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.scripts:$HOME/.appimages:/usr/local/go/bin:$HOME/go/bin:/usr/local:$PATH
 
 # Environment variables
 export EDITOR=nvim
