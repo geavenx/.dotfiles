@@ -1,24 +1,20 @@
 # Arquivo de configuração do Aliaser
 alias vim='nvim'
-alias upd='sudo apt update && sudo apt upgrade'
-alias zshconfig='vim ~/.zshrc'
 alias ifc='ifconfig'
 alias clearn='clear && neofetch'
-alias cls='clear'
-alias vi='nvim'
 alias ls='lsd'
-alias aptins='sudo apt update && sudo apt install'
-alias vims='nvim.appimage -S'
-alias ipchecker='python /home/vcardoso/.scripts/ip_check.py'
 alias v='nvim .'
 alias storage='du -h --max-depth=1 . | sort -h'
 
 # Tmux
+alias t='tmux'
 alias trs='tmux rename-session'
 
 # Docker
 alias containerip='docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}''
 
 # Sec4you
-alias capm='/usr/lib/jvm/java-11-openjdk-amd64/bin/java -jar /home/vcardoso/Downloads/layer7/Layer7_API_Gateway_Policy_Manager_11.0.00/Manager-11.0.00.14811/Manager.jar'
-alias vpnsec=nmtui connect sec4you
+alias vpnsec='nmtui connect sec4you'
+
+# Spotify-player
+alias sp='spotify_player'
