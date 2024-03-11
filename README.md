@@ -17,8 +17,8 @@ Dotfiles are configuration files that start with a dot (`.`) and are used to cus
 
 - Shell (Zsh)
 - Text editors (Neovim)
-- Version control (Git)
-- Terminal emulator (Alacritty)
+- Terminal emulator (kitty)
+- Font used (Comic Shanns Nerd Font)
 - and more...
 
 By centralizing these configurations, I can easily synchronize and maintain a consistent development environment across different machines.
