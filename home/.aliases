@@ -5,6 +5,8 @@ alias clearn='clear && neofetch'
 alias ls='lsd'
 alias v='nvim .'
 alias storage='du -h --max-depth=1 . | sort -h'
+alias lag="lsd -lag"
+alias lg='lazygit'
 
 # Tmux
 alias t='tmux'
