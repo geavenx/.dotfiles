@@ -183,4 +183,8 @@ return {
 		dependencies = { "mfussenegger/nvim-dap" },
 		event = "VeryLazy",
 	},
+
+	-- nvim-dap-go (https://github.com/leoluz/nvim-dap-go)
+	--
+	{ "leoluz/nvim-dap-go" },
 }
