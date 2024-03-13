@@ -8,8 +8,12 @@ check_if_empty() {
 	[[ -z "$1" ]] && echo "0" || echo "$1"
 }
 
-KEY="$(pass openWeather/eww)"
+get_secrets() {
+    # get the api key from file and remove the " wrapper
+    cat $HOME/.config/secrets.json | jq .openWeather.eww | awk -v char='"' '{gsub(char,""); print}'
+}
 
+KEY=$(get_secrets)
 
 ID="3449701" # ID for Santo André - SP
 UNITS="metric"
