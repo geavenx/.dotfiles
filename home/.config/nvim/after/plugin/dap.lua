@@ -1,20 +1,15 @@
 require("mason").setup()
 require("mason-nvim-dap").setup({
-	ensure_installed = { "codelldb" },
+	ensure_installed = {
+		"codelldb",
+		"delve",
+	},
 	automatic_installation = false,
 	handlers = {},
 })
 
 -- DAP UI
 local dap, dapui, debuggers = require("dap"), require("dapui"), require("debuggers")
-
-dap.set_log_level("DEBUG")
-
-dap.adapters.lldb = {
-	type = "executable",
-	command = "/usr/bin/lldb-vscode",
-	name = "lldb",
-}
 
 dap.adapters.codelldb = {
 	type = "server",
@@ -24,20 +19,8 @@ dap.adapters.codelldb = {
 		args = { "--port", "13000" },
 	},
 }
-
-dap.adapters.gdb = {
-	type = "executable",
-	name = "gdb",
-	executable = {
-		command = "/usr/bin/gdb",
-		args = { "-i", "dap" },
-	},
-}
-
 dap.configurations.cpp = {
-	debuggers.lldb,
 	debuggers.codelldb,
-	debuggers.gdb,
 }
 
 dapui.setup()
