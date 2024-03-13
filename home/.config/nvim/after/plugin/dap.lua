@@ -11,6 +11,9 @@ require("mason-nvim-dap").setup({
 -- DAP UI
 local dap, dapui, debuggers = require("dap"), require("dapui"), require("debuggers")
 
+-- nvim-dap-go
+require("dap-go").setup()
+
 dap.adapters.codelldb = {
 	type = "server",
 	port = "13000",
