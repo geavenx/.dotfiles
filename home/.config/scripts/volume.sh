@@ -2,11 +2,9 @@
 
 # Get Volume
 get_volume() {
-	status=`pamixer --get-volume-human`
+	status=`pamixer --get-volume`
     if [[ "$status" == "muted" ]]; then
         dunstify -a "changeVolume" -u low -i audio-volume-muted -h string:x-dunst-stack-tag:volume "Volume muted"
-    else
-        dunstify -a "changeVolume" -u low -i audio-volume-muted -h string:x-dunst-stack-tag:volume "$status"
     fi
     echo "$status"
 
@@ -16,7 +14,6 @@ get_volume() {
 inc_volume() {
 	pamixer -i 5
 	volume=`pamixer --get-volume-human`
-    dunstify -a "changeVolume" -u low -i audio-volume-high -h string:x-dunst-stack-tag:volume \
     -h int:value:"$volume" "Volume: ${volume}"
 }
 
@@ -24,7 +21,6 @@ inc_volume() {
 dec_volume() {
 	pamixer -d 5
 	volume=`pamixer --get-volume-human`
-    dunstify -a "changeVolume" -u low -i audio-volume-high -h string:x-dunst-stack-tag:volume \
     -h int:value:"$volume" "Volume: ${volume}"
 }
 
