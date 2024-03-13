@@ -8,7 +8,6 @@
   (centerbox :orientation "h"
       (workspaces)
       (music)
-      ;;(weather)
       (sidestuff)
   )
 )
@@ -18,7 +17,7 @@
     (weather)
     (metric :label "󰕾"
             :value volume
-            :onchange "amixer -D pulse sset Master {}%")
+            :onchange "pamixer --set-volume {}")
     (metric :label ""
             :value {EWW_RAM.used_mem_perc}
             :onchange "")
@@ -58,7 +57,7 @@
        :orientation "h"
        :space-evenly false
        :halign "center"
-    {music != "" ? "🎵${music}" : ""}))
+    {music != "" ? "🎵 ${music}" : ""}))
 
 
 (defwidget metric [label value onchange]
@@ -77,8 +76,8 @@
 (deflisten music :initial ""
   "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
 
-(defpoll volume :interval "1s"
-  "scripts/getvol")
+(defpoll volume :interval "50ms"
+  "$HOME/.config/scripts/volume.sh -get")
 
 (defpoll time :interval "10s"
   "date '+%H:%M %b %d, %Y'")
