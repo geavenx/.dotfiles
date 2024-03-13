@@ -1,8 +1,24 @@
-;; weather variables
+;;           ;;
+;; VARIABLES ;;
+;;           ;;
+
+;; Weather
 (defpoll weather_temp :interval "15m" :initial "0"
   "$HOME/.config/scripts/weather.sh current_temp")
 (defpoll weather_icon :interval "15m"
   "$HOME/.config/scripts/weather.sh icon")
+
+;; Music
+(defpoll music_name :interval "1s"
+  "$HOME/.config/scripts/media.sh title")
+(defpoll music_artist :interval "1s"
+  "$HOME/.config/scripts/media.sh artist")
+(defpoll music_status :interval "50ms"
+  "$HOME/.config/scripts/media.sh statusicon")
+
+;;                  ;;
+;; END OF VARIABLES ;;
+;;                  ;;
 
 (defwidget bar []
   (centerbox :orientation "h"
@@ -15,14 +31,14 @@
 (defwidget sidestuff []
   (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
     (weather)
-    (metric :label "󰕾"
+    (metric :label "󰕾  ${volume-h}"
             :value volume
             :onchange "pamixer --set-volume {}")
-    (metric :label ""
+    (metric :label "  ${round(EWW_RAM.used_mem_perc, 0)}%"
             :value {EWW_RAM.used_mem_perc}
             :onchange "")
-    (metric :label "󰨣"
-            :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
+    (metric :label "   ${round(EWW_CPU.avg, 0)}%"
+            :value {EWW_CPU.avg}
             :onchange "")
     time))
 
@@ -57,7 +73,18 @@
        :orientation "h"
        :space-evenly false
        :halign "center"
-    {music != "" ? "🎵 ${music}" : ""}))
+    (box :space-evenly false
+         :orientation "h"
+         "${music_status}")
+    (box :space-evenly false
+         :class "music-name"
+         :orientation "h"
+         "${music_name}")
+    (box :space-evenly false
+         :orientation "h"
+         "[${music_artist}]")
+  )
+)
 
 
 (defwidget metric [label value onchange]
@@ -78,6 +105,9 @@
 
 (defpoll volume :interval "50ms"
   "$HOME/.config/scripts/volume.sh -get")
+
+(defpoll volume-h :interval "50ms"
+  "pamixer --get-volume-human")
 
 (defpoll time :interval "10s"
   "date '+%H:%M %b %d, %Y'")
