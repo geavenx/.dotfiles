@@ -65,11 +65,5 @@ else
     echo "Please copy it manually."
 fi
 
-echo "Please add the SSH key to your GitHub account (https://github.com/settings/ssh/new) 
-and try to connect to GitHub via SSH."
+echo "Please add the SSH key to your GitHub account (https://github.com/settings/ssh/new)"
 
-echo "======="
-echo " Done!"
-echo "======="
-
-# End of the script
