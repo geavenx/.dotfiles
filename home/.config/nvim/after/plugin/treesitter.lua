@@ -11,6 +11,8 @@ require("nvim-treesitter.configs").setup({
 		"html",
 		"c",
 		"cpp",
+		"markdown",
+		"markdown_inline",
 	},
 	sync_install = false,
 	highlight = { enable = true },
