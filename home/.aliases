@@ -13,6 +13,7 @@ alias dots="cd $HOME/repos/dotfiles"
 alias wk="cd $HOME/work"
 alias ssd="cd /mnt/ssd"
 alias hdd="cd /mnt/hdd"
+alias nvimc="cd $HOME/repos/dotfiles/home/.config/nvim"
 
 # Tmux
 alias t='tmux'
