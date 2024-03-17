@@ -29,6 +29,18 @@ vim.opt.undofile = true
 vim.opt.termguicolors = true -- better colors on vim :term
 vim.opt.guicursor = "" -- block cursor on insert mode!
 
+-- Shared clipboard with the OS
+vim.opt.clipboard = "unnamedplus"
+
+-- Highlight when yanking text
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yanking text",
+	group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
+
 -----------------------------------------------------
 -- Colorscheme
 -----------------------------------------------------
