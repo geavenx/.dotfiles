@@ -1,3 +1,4 @@
+-- FUGITIVE SETUP
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "<g>it <s>ee" })
 
 local geavenx_Fugitive = vim.api.nvim_create_augroup("geavenx_Fugitive", {})
@@ -31,4 +32,15 @@ autocmd("BufWinEnter", {
 			{ buffer = bufnr, remap = false, desc = "<g>it push -u <o>rigin" }
 		)
 	end,
+})
+
+-- GITSIGNS SETUP
+require("gitsigns").setup({
+	signs = {
+		add = { text = "+" },
+		change = { text = "~" },
+		delete = { text = "_" },
+		topdelete = { text = "‾" },
+		changedelete = { text = "~" },
+	},
 })
