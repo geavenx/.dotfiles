@@ -18,7 +18,3 @@ end
 map("<leader>pf", builtin.find_files, "<p>roject <f>ind")
 map("<leader>ps", builtin.live_grep, "<p>roject <s>earch")
 map("<leader><leader>", builtin.buffers, "Existing buffers")
-map("gd", builtin.lsp_definitions, "<g>oto <d>efinition")
-map("gr", builtin.lsp_references, "<g>oto <r>eferences")
-map("gI", builtin.lsp_implementations, "<g>oto <I>mplementations")
-map("D", builtin.lsp_type_definitions, "type <D>efinition")
