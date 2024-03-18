@@ -17,7 +17,20 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.5",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			{
+				"nvim-telescope/telescope-fzf-native.nvim",
+
+				build = "make",
+
+				cond = function()
+					return vim.fn.executable("make") == 1
+				end,
+			},
+			{ "nvim-telescope/telescope-ui-select.nvim" },
+			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
+		},
 	},
 
 	-- Treesitter (https://github.com/nvim-treesitter/nvim-treesitter)
@@ -45,10 +58,7 @@ return {
 			vim.o.timeout = true
 			vim.o.timeoutlen = 300
 		end,
-		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-		},
+		opts = {},
 	},
 
 	-- Undotree (https://github.com/mbbill/undotree)
@@ -127,6 +137,10 @@ return {
 	--
 	{ "tpope/vim-fugitive" },
 
+	-- gitsigns (https://github.com/lewis6991/gitsigns.nvim)
+	--
+	{ "lewis6991/gitsigns.nvim" },
+
 	-------------------------------------------------------
 	-- AI Coding
 	-------------------------------------------------------
@@ -160,6 +174,7 @@ return {
 	{
 		"numToStr/Comment.nvim",
 		lazy = false,
+		opts = {}, -- VISUAL MODE: gc, gb; NORMAL MODE: gcc, gcb, gcA...
 	},
 
 	-------------------------------------------------------
