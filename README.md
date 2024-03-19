@@ -37,7 +37,7 @@ To install these dotfiles on your system, follow these steps:
 
 3. **Using the Makefile:**
     I use [stow](https://www.gnu.org/software/stow/) to create symlinks from my repository to the actual system.
-    The command above will use stow to create all of those symlinks at once.
+    The command below will use stow to create all of those symlinks at once.
     ```bash
     make all
     ```
