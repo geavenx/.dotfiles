@@ -21,3 +21,8 @@ vim.keymap.set('n', '<leader>gg', '<cmd> :LazyGit <CR>', { desc = 'Open lazy<g>i
 
 vim.keymap.set('n', '<leader>dr', "<cmd> :lua require('dap').continue() <CR>", { desc = '<d>ebugger <r>un' })
 vim.keymap.set('n', '<leader>db', "<cmd> :lua require('dap').toggle_breakpoint() <CR>", { desc = '<d>ebugger <b>reakpoint' })
+
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
