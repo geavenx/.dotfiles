@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
   callback = function(event)
     local map = function(mapping, func, description)
-      vim.keymap.set('n', mapping, func, { buffer = event.buf, descp = description })
+      vim.keymap.set('n', mapping, func, { buffer = event.buf, desc = description })
     end
 
     map('gd', require('telescope.builtin').lsp_definitions, '<g>oto <d>efinition')
