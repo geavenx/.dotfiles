@@ -1,3 +1,5 @@
 [user]
 	name = geavenx
 	email = vitordonnangeloc@gmail.com
+[core]
+	editor = nvim
