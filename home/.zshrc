@@ -1,5 +1,6 @@
 # Path
 export PATH=/usr/local/bin:$HOME/.local/bin:/usr/local/go/bin:$HOME/go/bin:/usr/local:$PATH
+export XDG_DATA_DIRS=$HOME/.local/share/applications:$XDG_DATA_DIRS
 
 # Environment variables
 export EDITOR=nvim
@@ -9,7 +10,16 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 # Plugins
-plugins=(git tmux alias-finder git-prompt command-not-found sudo archlinux)
+plugins=(
+    git
+    tmux
+    alias-finder
+    git-prompt
+    command-not-found
+    sudo 
+    archlinux
+    poetry
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,6 +72,11 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 # Pywal terminal persistance
-(cat ~/.cache/wal/sequences &)
-cat ~/.cache/wal/sequences
-source ~/.cache/wal/colors-tty.sh
+# (cat ~/.cache/wal/sequences &)
+# cat ~/.cache/wal/sequences
+# source ~/.cache/wal/colors-tty.sh
+
+# direnv
+eval "$(direnv hook zsh)"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

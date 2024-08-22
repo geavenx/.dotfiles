@@ -27,3 +27,6 @@ alias vpnsec='nmtui connect sec4you'
 
 # Spotify-player
 alias sp='spotify_player'
+
+# pdf viewer
+alias pdf='apvlv'
