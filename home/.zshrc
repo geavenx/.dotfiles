@@ -1,5 +1,5 @@
 # Path
-export PATH=/usr/local/bin:$HOME/.local/bin:/usr/local/go/bin:$HOME/go/bin:/usr/local:$PATH
+export PATH=/usr/local/bin:$HOME/.local/bin:/usr/local/go/bin:$HOME/go/bin:/usr/local:$HOME/.config/emacs/bin/:$PATH
 export XDG_DATA_DIRS=$HOME/.local/share/applications:$XDG_DATA_DIRS
 
 # Environment variables
@@ -38,6 +38,7 @@ eval "$(starship init zsh)"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV="true"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
@@ -71,12 +72,25 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
+# direnv
+eval "$(direnv hook zsh)"
+
+# Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# OpenAI API Key used by chatgpt.nvim plugin
+export OPENAI_API_KEY=$(pass chatgpt/nvim)
+
+
+
+
+
+# Archived
 # Pywal terminal persistance
 # (cat ~/.cache/wal/sequences &)
 # cat ~/.cache/wal/sequences
 # source ~/.cache/wal/colors-tty.sh
 
-# direnv
-eval "$(direnv hook zsh)"
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+zstyle ':completion:*' menu select

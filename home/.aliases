@@ -19,6 +19,9 @@ alias nvimc="cd $HOME/repos/dotfiles/home/.config/nvim"
 alias t='tmux'
 alias trs='tmux rename-session'
 
+# Emacs
+alias emacs="emacsclient -c -a 'emacs'"
+
 # Docker
 alias containerip='docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}''
 
