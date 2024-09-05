@@ -15,10 +15,8 @@ This repository contains my personal dotfiles, a collection of configuration fil
 - Shell: Zsh
 - Text editor: Neovim
 - Terminal emulator: kitty
-- Fonts Comic Shanns Nerd Font
-- Compositor: Hyprland
-- Status bar: Eww
-- Application launcher: Fuzzel
+- Font: Jet Brains Mono Nerd Font
+- DE: GNOME 46
 - Spotify client & player: spotifyd & spotify-player
 
 ## Installation
@@ -46,7 +44,7 @@ To install these dotfiles on your system, follow these steps:
     make delete
     ```
 
-    NOTE: Obviously, you have to install stow in order to do this.
+    **NOTE:** Obviously, you have to install `stow` in order to do this.
 
 ## Customization
 
