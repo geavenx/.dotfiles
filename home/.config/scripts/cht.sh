@@ -1,7 +1,7 @@
 #!/bin/bash
 
 languages=`echo "golang flask python lua cpp c typescript nodejs" | tr ' ' '\n'`
-core_utils=`echo "xargs find mv sed awk" | tr ' ' '\n'`
+core_utils=`echo "xargs find mv sed awk git curl" | tr ' ' '\n'`
 
 selected=`printf "$languages\n$core_utils" | fzf`
 
