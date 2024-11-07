@@ -1,0 +1,14 @@
+# Arquivo de configuração do Aliaser
+alias vim='nvim'
+alias v='nvim .'
+alias storage='du -h --max-depth=1 . | sort -h'
+
+# Directories
+alias dots="cd $HOME/repos/dotfiles"
+alias wk="cd $HOME/work"
+
+# Docker
+alias containerip='docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}''
+
+# Pyenv
+alias usevenv='pyenv activate $(basename "$PWD")'
