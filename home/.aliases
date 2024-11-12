@@ -19,3 +19,6 @@ alias aptins='sudo apt install'
 
 # Lazygit
 alias lg='lazygit'
+
+# Tmux
+alias t='tmux'
