@@ -12,3 +12,10 @@ alias containerip='docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAdd
 
 # Pyenv
 alias usevenv='pyenv activate $(basename "$PWD")'
+
+# Apt
+alias upd='sudo apt update && sudo apt upgrade -y'
+alias aptins='sudo apt install'
+
+# Lazygit
+alias lg='lazygit'
