@@ -27,3 +27,11 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 
 export PYENV_ROOT="$HOME/.pyenv"
+
+# pnpm
+export PNPM_HOME="/home/vcardoso/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
