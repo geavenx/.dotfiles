@@ -26,7 +26,7 @@ return {
         clangd = {},
         pyright = {},
         rust_analyzer = {},
-        tsserver = {},
+        -- tsserver = {},
         regols = {},
         lua_ls = {
           settings = {
