@@ -12,7 +12,7 @@ return {
       -- this plugin setup automatically everything you need for rust development
       {
         'mrcjkb/rustaceanvim',
-        version = '^4', -- Recommended
+        version = '^5', -- Recommended
         ft = { 'rust' },
       },
     },
@@ -26,7 +26,6 @@ return {
         clangd = {},
         pyright = {},
         rust_analyzer = {},
-        tsserver = {},
         regols = {},
         lua_ls = {
           settings = {
@@ -43,6 +42,7 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua',
+        'typescript-language-server',
         'black',
         'isort',
         'prettierd',
@@ -51,6 +51,8 @@ return {
 
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
       require('mason-lspconfig').setup {
+        ensure_installed = {},
+        automatic_installation = {},
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
