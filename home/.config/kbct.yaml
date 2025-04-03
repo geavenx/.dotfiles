@@ -1,0 +1,32 @@
+# Custom Linux Keymap for Nuphy Nutype F1 Keyboard
+#  - Swap capslock for escape
+#  - Swap escape combo for grave accent & tilde
+#  - Enable capslock via shift modifiers
+#    (helpful in rare scenarios where kbct screws up)
+#
+# Notes:
+# - This remap file is intended for use with kbct.
+#   See https://github.com/samvel1024/kbct/
+# - This config assumes (but doesn't require)
+#   a Nuphy Nutype F1 keyboard
+#   running in 'Windows Mode' available in
+#   Firmware 1.01 or later.
+#   See https://nuphy.com/pages/firmwares-for-nutype-f1
+
+# Apply to Nutype F1 wired/bluetooth modes:
+#  - Bluetooth: "NUTYPE F1 Keyboard"
+#  - Bluetooth: "NUTYPE F1" (as of Ubuntu 22.04? Or firmware 1.01?)
+#  - Wired USB: "SONiX USB DEVICE"
+- keyboards: ["Razer Razer BlackWidow X Chroma"]
+
+  keymap:
+    capslock: esc
+    esc: grave
+
+  layers:
+    - modifiers: ["rightshift"]
+      keymap:
+        capslock: capslock
+    - modifiers: ["leftshift"]
+      keymap:
+        capslock: capslock
