@@ -13,7 +13,6 @@ plugins=(
     archlinux
     poetry
     zsh-syntax-highlighting
-    zsh-completions
 )
 
 source $ZSH/oh-my-zsh.sh
