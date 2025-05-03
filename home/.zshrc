@@ -3,8 +3,7 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/go/bin:$PATH
 
 # Oh-my-zsh path
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-plugins=(git)
+plugins=(git tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -35,3 +34,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+. "$HOME/.local/bin/env"
+
+# Spicetify path
+export PATH=$PATH:/home/vcardoso/.spicetify

@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/work ~/repos/projects ~/repos/dotfiles ~/repos/python -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/work ~/work/forks ~/work/upstreams ~/repos ~/repos/dotfiles -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then

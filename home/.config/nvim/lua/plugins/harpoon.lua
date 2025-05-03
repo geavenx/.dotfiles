@@ -16,7 +16,7 @@ return {
         harpoon.ui:toggle_quick_menu(harpoon:list())
       end, 'Open harpoon window')
       map('<leader>ha', function()
-        harpoon:list():append()
+        harpoon:list():add()
       end, '<h>arpoon <a>dd current buffer')
       map('<leader>h1', function()
         harpoon:list():select(1)
