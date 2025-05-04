@@ -1,6 +1,6 @@
 # zsh paths
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="$PATH:$HOME/.local/bin:$HOME/go/bin"
+export PATH="$PATH:$HOME/go/bin"
 export HISTFILE="/dev/null"
 
 # Plugins
@@ -52,3 +52,14 @@ esac
 # starship
 eval "$(starship init zsh)"
 # starship end
+
+# yazi shell wrapper
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+# yazi shell wrapper end
