@@ -56,7 +56,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Shift+d exec thunar
 
 #start firefox
-bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+f exec google-chrome
 
 # start a terminal
 bindsym $mod+Return exec kitty
