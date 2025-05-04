@@ -1,7 +1,6 @@
 # zsh paths
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$PATH:$HOME/go/bin"
-export HISTFILE="/dev/null"
 
 # Plugins
 plugins=(
