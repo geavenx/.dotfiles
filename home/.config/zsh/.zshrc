@@ -62,3 +62,5 @@ function y() {
 	rm -f -- "$tmp"
 }
 # yazi shell wrapper end
+
+. "$HOME/.local/share/../bin/env"
