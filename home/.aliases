@@ -1,4 +1,5 @@
 # Arquivo de configuração do Aliaser
+alias uvim='uv run nvim'
 alias vim='nvim'
 alias v='nvim .'
 alias storage='du -h --max-depth=1 . | sort -h'
@@ -16,6 +17,9 @@ alias usevenv='pyenv activate $(basename "$PWD")'
 # Apt
 alias upd='sudo apt update && sudo apt upgrade -y'
 alias aptins='sudo apt install'
+
+# Git Delete Merged Branches
+alias gdmb='git branch --no-color --merged | grep -vE "$(git_main_branch)|main|master|develop|developer|\*" | xargs -n 1 git branch -d'
 
 # Lazygit
 alias lg='lazygit'
