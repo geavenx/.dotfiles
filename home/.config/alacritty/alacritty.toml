@@ -19,6 +19,8 @@ padding.y = 10
 decorations = "Full"
 decorations_theme_variant = "Dark" # "Light"
 
+startup_mode = "Maximized"
+
 [font]
 
 normal.family = "FiraCode Nerd Font Mono"
@@ -26,7 +28,7 @@ bold.family = "FiraCode Nerd Font Mono"
 italic.family = "FiraCode Nerd Font Mono"
 bold_italic.family = "FiraCode Nerd Font Mono"
 
-size = 20.0
+size = 14.0
 
 [colors.primary]
 background = '#191724'
