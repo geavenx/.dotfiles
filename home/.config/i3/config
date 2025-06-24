@@ -19,11 +19,15 @@ font pango:"MesloLGS NF" 12
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
-# Start XDG autostart .desktop files using dex. See also
-# https://wiki.archlinux.org/index.php/XDG_Autostart
+
+# Wallpapers
 exec --no-startup-id nitrogen --restore
+# simple PolicyKit authentication agent
 exec --no-startup-id lxpolkit
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 exec --no-startup-id dex --autostart --environment i3
+
 exec --no-startup-id polybar
 exec_always --no-startup-id picom --experimental-backends -cb --config $HOME/.config/picom/picom.conf
 exec_always --no-startup-id autotiling
@@ -66,6 +70,8 @@ bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi -show drun
+
+bindsym Print exec flameshot gui
 
 # change focus
 bindsym $mod+h focus left
