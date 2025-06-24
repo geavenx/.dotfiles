@@ -23,3 +23,6 @@ alias trs='tmux rename-session'
 # Docker
 alias containerip='docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}''
 
+# Systemctl
+alias turnoff='systemctl poweroff'
+alias reboot='systemctl reboot'
