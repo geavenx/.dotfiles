@@ -1,48 +1,37 @@
--- Relative line numbers
-vim.opt.nu = true
-vim.opt.relativenumber = true
+-- NOTE: For more options, you can see `:help option-list`
 
--- keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
+vim.o.nu = true -- Show current line number (`false` make it always "0")
+vim.o.relativenumber = true -- Make line numbers relative to the cursor position
+vim.o.mouse = 'a' -- Enable mouse mode, it is useful for resizing splits
+vim.o.showmode = false -- Don't show current mode, since it is already in the status bar
+vim.o.breakindent = true -- Enable break indent
 
--- 4 space indenting & auto indenting
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.smartindent = true
+vim.schedule(function()
+  vim.o.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim
+end)
 
--- Undo settings
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv 'HOME' .. '/.vim/undodir'
-vim.opt.undofile = true
+vim.o.undofile = true -- Save undo history
 
-vim.opt.termguicolors = true -- better colors on vim :term
-vim.opt.guicursor = '' -- block cursor on insert mode!
+vim.o.ignorecase = true -- Case-insensitive searching,
+vim.o.smartcase = true -- Unless \C or one or more Capital letters in the search
 
--- Shared clipboard with the OS
-vim.opt.clipboard = 'unnamedplus'
+vim.o.signcolumn = 'yes' -- Keep signcolumn on by default
 
--- Case-insensitive searching UNLESS \C or capital in search
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+vim.o.updatetime = 250 -- Decrease update time
+vim.o.timeoutlen = 300 -- Decrease mapped sequence wait time
 
--- Sets how neovim will display certain whitespace in the editor.
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.o.splitright = true -- Configure how new splits should be opened
+vim.o.splitbelow = true -- ...
 
--- Preview substitutions live, as you type!
-vim.opt.inccommand = 'split'
+vim.o.inccommand = 'split' -- Preview substitutions live, as you type
 
--- Show which line your cursor is on
-vim.opt.cursorline = true
+vim.o.list = true --     Sets how neovim will display
+vim.opt.listchars = { -- certain whitespace characters in the editor.
+  tab = '» ',
+  trail = '·',
+  nbsp = '␣',
+}
 
--- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
-
--- Set highlight on search, but clear on pressing <Esc> in normal mode
-vim.opt.hlsearch = true
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-
-vim.opt.termguicolors = true
+vim.o.cursorline = true -- Show which line your cursor is on
+vim.o.scrolloff = 10 -- Minimal n of screen lines to keep above and below the cursor
+vim.o.confirm = true -- Raise dialig asking to save the file when fail operation e.g. (:q)
