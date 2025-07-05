@@ -19,6 +19,9 @@ font pango:"MesloLGS NF" 12
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
+# Disable screen blanking and DPMS
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
 
 # Wallpapers
 exec --no-startup-id nitrogen --restore
@@ -57,10 +60,17 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
+# start thinar
 bindsym $mod+Shift+d exec thunar
 
-#start firefox
-bindsym $mod+Shift+f exec google-chrome
+# start spotify
+bindsym $mod+Shift+s exec spotify
+
+# start Zen Browser
+bindsym $mod+Shift+f exec flatpak run app.zen_browser.zen
+
+# start ZapZap
+bindsym $mod+z exec flatpak run com.rtosta.zapzap
 
 # start a terminal
 bindsym $mod+Return exec kitty
