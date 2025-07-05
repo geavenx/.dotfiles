@@ -28,14 +28,24 @@ return { -- Autoformat
         }
       end
     end,
+
+    -- ft_parsers = {
+    --   javascriptreact = { 'javascript' },
+    --   typescriptreact = { 'typescript' },
+    -- },
+
     formatters_by_ft = {
       lua = { 'stylua' },
       python = { 'ruff_fix', 'ruff_format', 'ruff_organize_imports' },
+      markdown = { 'markdownlint' },
+      -- typescript = { 'prettierd', 'biome', stop_after_first = true },
+      -- javascript = { 'prettierd', 'biome', stop_after_first = true },
+
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
-      -- javascript = { "prettierd", "prettier", stop_after_first = true },
+      -- javascript = { "prettier", "prettierd", stop_after_first = true },
     },
   },
 }
