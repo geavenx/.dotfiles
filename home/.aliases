@@ -26,3 +26,8 @@ alias containerip='docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAdd
 # Systemctl
 alias turnoff='systemctl poweroff'
 alias reboot='systemctl reboot'
+
+# Git Delete Merged Branches
+alias gdmb='git branch --no-color --merged | grep -vE "$(git_main_branch)|main|master|develop|developer|\*" | xargs -n 1 git branch -d'
+
+alias cmg='memo generate'
