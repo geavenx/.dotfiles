@@ -15,7 +15,7 @@ alias tksv='tmux kill-server'
 alias containerip='docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}''
 
 # Systemctl
-alias turnoff='systemctl poweroff'
+alias shutdown='systemctl poweroff'
 alias reboot='systemctl reboot'
 
 # git
