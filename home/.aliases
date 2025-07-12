@@ -1,25 +1,48 @@
 # Arquivo de configuração do Aliaser
 alias vim='nvim'
-alias ifc='ifconfig'
-alias clearn='clear && neofetch'
-alias ls='lsd'
 alias v='nvim .'
 alias storage='du -h --max-depth=1 . | sort -h'
-alias lag="lsd -lag"
 alias lg='lazygit'
-
 alias upd='sudo apt update && sudo apt upgrade -y'
-
-# Directories
-alias dots="cd $HOME/repos/dotfiles"
-alias ssd="cd /mnt/ssd"
-alias hdd="cd /mnt/hdd"
-alias nvimc="cd $HOME/repos/dotfiles/home/.config/nvim"
 
 # Tmux
 alias t='tmux'
 alias trs='tmux rename-session'
+alias trw='tmux rename-window'
+alias tksv='tmux kill-server'
 
 # Docker
 alias containerip='docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}''
 
+# Systemctl
+alias shutdown='systemctl poweroff'
+alias reboot='systemctl reboot'
+
+# git
+alias gss='git status -s'
+alias gc='git commit -v'
+alias glo='git log --oneline --decorate'
+alias ggp='git push origin $CURRENT_GIT_BRANCH'
+alias ggl='git pull origin $CURRENT_GIT_BRANCH'
+
+
+alias cmg='memo generate'
+
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+alias cd="zd"
+zd() {
+  if [ $# -eq 0 ]; then
+    builtin cd ~ && return
+  elif [ -d "$1" ]; then
+    builtin cd "$1"
+  else
+    z "$@" && printf " \U000F17A9 " && pwd || echo "Error: Directory not found"
+  fi
+}
+open() {
+  xdg-open "$@" >/dev/null 2>&1
+}
