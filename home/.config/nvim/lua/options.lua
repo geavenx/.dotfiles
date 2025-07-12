@@ -6,6 +6,9 @@ vim.o.mouse = 'a' -- Enable mouse mode, it is useful for resizing splits
 vim.o.showmode = false -- Don't show current mode, since it is already in the status bar
 vim.o.breakindent = true -- Enable break indent
 
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+
 vim.schedule(function()
   vim.o.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim
 end)

@@ -165,7 +165,7 @@ return {
       -- clangd = {},
       -- gopls = {},
       pyright = {},
-      -- biome = {},
+      biome = {},
       -- rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
@@ -209,7 +209,8 @@ return {
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
       -- 'prettierd',
-      -- 'biome',
+      'biome',
+      'ruff',
       -- 'eslint_d',
       'markdownlint',
     })

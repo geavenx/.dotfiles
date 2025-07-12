@@ -39,7 +39,7 @@ return { -- Autoformat
       python = { 'ruff_fix', 'ruff_format', 'ruff_organize_imports' },
       markdown = { 'markdownlint' },
       -- typescript = { 'prettierd', 'biome', stop_after_first = true },
-      -- javascript = { 'prettierd', 'biome', stop_after_first = true },
+      javascript = { 'biome', stop_after_first = true },
 
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
