@@ -163,7 +163,7 @@ return {
       -- ruff = {},
 
       -- clangd = {},
-      -- gopls = {},
+      gopls = {},
       pyright = {},
       biome = {},
       -- rust_analyzer = {},
@@ -211,6 +211,7 @@ return {
       -- 'prettierd',
       'biome',
       'ruff',
+      'gofumpt',
       -- 'eslint_d',
       'markdownlint',
     })
