@@ -1,6 +1,6 @@
 # zsh envvars
 export EDITOR=nvim
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.config/scripts:$PATH"
 
 # XDG envvars
 export XDG_CACHE_HOME="$HOME/.cache"
