@@ -28,10 +28,10 @@ alias ggl='git pull origin $CURRENT_GIT_BRANCH'
 
 alias cmg='memo generate'
 
-alias ls='eza -lh --group-directories-first --icons=auto'
-alias lsa='ls -a'
+alias ls='eza -1 --group-directories-first'
+alias lsa='eza -a --group-directories-first'
+alias ll='eza -lh --group-directories-first --icons=auto'
 alias lt='eza --tree --level=2 --long --icons --git'
-alias lta='lt -a'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias cd="zd"
 zd() {
