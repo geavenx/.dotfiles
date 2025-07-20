@@ -38,3 +38,4 @@ vim.opt.listchars = { -- certain whitespace characters in the editor.
 vim.o.cursorline = true -- Show which line your cursor is on
 vim.o.scrolloff = 10 -- Minimal n of screen lines to keep above and below the cursor
 vim.o.confirm = true -- Raise dialig asking to save the file when fail operation e.g. (:q)
+
