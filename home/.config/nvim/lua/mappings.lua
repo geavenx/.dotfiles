@@ -28,4 +28,6 @@ vim.keymap.set('n', '<leader><leader>', ':so<CR>')
 vim.keymap.set('n', '<leader>gj', [[$a`json:""`<Left><Left>]], { desc = 'append json tag to the end of struct' })
 vim.keymap.set('n', '<leader>gx', [[$a`xml:""`<Left><Left>]], { desc = 'append xml tag to the end of struct' })
 
-vim.keymap.set('n', '<leader>r', ':!./% ')
+vim.keymap.set('n', '<leader>r', ':!./% ') -- Run current file
+
+vim.keymap.set('n', '<leader>u', ':UndotreeToggle<CR>', { desc = 'Undotree' })

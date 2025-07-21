@@ -478,10 +478,11 @@ require('lazy').setup({
   require 'kickstart.plugins.guess-indent',
   require 'kickstart.plugins.ts-tools',
   require 'kickstart.plugins.uv',
+  require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.undotree',
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
