@@ -21,6 +21,11 @@ alias aptins='sudo apt install'
 # Git Delete Merged Branches
 alias gdmb='git branch --no-color --merged | grep -vE "$(git_main_branch)|main|master|develop|developer|\*" | xargs -n 1 git branch -d'
 
+alias ls='eza -1 --group-directories-first'
+alias lsa='eza -a --group-directories-first'
+alias ll='eza -lh --group-directories-first --icons=auto'
+alias lt='eza --tree --level=2 --long --icons --git'
+
 # Lazygit
 alias lg='lazygit'
 
