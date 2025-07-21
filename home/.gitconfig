@@ -1,5 +1,15 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[pull]
+	rebase = true
+[init]
+	defaultBranch = master
 [user]
 	name = Vitor Cardoso
 	email = vitordonnangeloc@proton.me
+
 [core]
-	editor = nvim
+    editor = nvim
