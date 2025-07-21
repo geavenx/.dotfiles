@@ -1,9 +1,9 @@
 # Path
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/go/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/go/bin:/$HOME/.cargo/bin:$HOME/.opencode/bin:$PATH
 
 # Oh-my-zsh path
 export ZSH="$HOME/.oh-my-zsh"
-plugins=(git tmux)
+plugins=(git tmux sudo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,3 +39,8 @@ esac
 
 # Spicetify path
 export PATH=$PATH:/home/vcardoso/.spicetify
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
+
+zstyle ':completion:*' menu select
+
