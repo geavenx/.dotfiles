@@ -480,6 +480,7 @@ require('lazy').setup({
   require 'kickstart.plugins.uv',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.undotree',
+  require 'kickstart.plugins.neogit',
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',

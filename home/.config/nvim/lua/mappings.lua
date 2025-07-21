@@ -31,3 +31,5 @@ vim.keymap.set('n', '<leader>gx', [[$a`xml:""`<Left><Left>]], { desc = 'append x
 vim.keymap.set('n', '<leader>r', ':!./% ') -- Run current file
 
 vim.keymap.set('n', '<leader>u', ':UndotreeToggle<CR>', { desc = 'Undotree' })
+
+vim.keymap.set('n', '<leader>gg', ':Neogit<CR>', { desc = 'Neogit' })
