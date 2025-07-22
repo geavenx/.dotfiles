@@ -1,64 +1,43 @@
-# .Dotfiles
+# lab settings
 
-This repository contains my personal dotfiles, a collection of configuration files and scripts that I use to customize and personalize my development environment. Feel free to explore, fork, and adapt them to suit your own preferences.
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Installation](#installation)
-- [Customization](#customization)
-- [Contributing](#contributing)
-- [License](#license)
+This repository holds my personal configuration files for my computers
 
 ## Overview
 
-- Shell: Zsh
-- Text editor: Neovim
-- Terminal emulator: kitty
-- Font: Jet Brains Mono Nerd Font
-- DE: GNOME 46
-- Spotify client & player: spotifyd & spotify-player
+- Shell: ssh
+- Text editor:
+- terminal: alacritty
+- font: CaskaydiaMono Nerd Font
+- wayland compositor: hyprland
 
 ## Installation
 
-To install these dotfiles on your system, follow these steps:
+1. **Clone this repo:**
 
-1. **Clone the repository:**
     ```bash
-    git clone https://github.com/geavenx/dotfiles.git ~/.dotfiles
+    git clone https://github.com/geavenx/dotfiles.git ~/dotfiles
+    cd ~/dotfiles
     ```
 
-2. **Navigate to the dotfiles directory:**
-    ```bash
-    cd ~/.dotfiles
-    ```
+2. **symlinking the configuration files:**
 
-3. **Using the Makefile:**
-    I use [stow](https://www.gnu.org/software/stow/) to create symlinks from my repository to the actual system.
-    The command below will use stow to create all of those symlinks at once.
+    I use [stow](https://www.gnu.org/software/stow/) to create symlinks from my
+    repository to the actual system. So every file under the [directory home](https://github.com/geavenx/.dotfiles/tree/main/home)
+    will be reflected in the system ~/ directory as a symlink.
+
+    - **Note:** You need to delete all files that has the same path as any of the
+    files that are recursively present in the [home directory](https://github.com/geavenx/.dotfiles/tree/main/home)
+
+    The command below will use **stow** to create all of those symlinks at once.
+
     ```bash
     make all
     ```
+
     And if you want to remove all symlinks, use
+
     ```bash
     make delete
     ```
 
-    **NOTE:** Obviously, you have to install `stow` in order to do this.
-
-## Customization
-
-To customize these dotfiles for your own use:
-
-- Fork this repo
-- Edit the specific configuration files in each tool's directory.
-- Add or remove configurations as needed.
-
-## Contributing
-
-If you find an issue, have a suggestion, or want to contribute improvements, please open an issue or create a pull request. Your contributions are highly welcome!
-
-## License
-
-This project is licensed under the [MIT License](LICENSE). Feel free to use and modify the dotfiles.
-
+    **Note:** Obviously, you have to install `stow` in order to do this.
