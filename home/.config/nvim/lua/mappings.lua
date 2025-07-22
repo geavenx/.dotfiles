@@ -16,6 +16,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'scroll up keeping the cursor o
 -- }}
 
 vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = '<s>earch and replace all' }) -- Search and replace word's all ocurrencies
+
 vim.keymap.set('x', '<leader>s', function() -- Same thing as the above, but only inside a visual line selection
   local word = vim.fn.expand '<cword>'
   local escaped_word = vim.fn.escape(word, '/\\.*[]^$')
@@ -33,3 +34,5 @@ vim.keymap.set('n', '<leader>r', ':!./% ') -- Run current file
 vim.keymap.set('n', '<leader>u', ':UndotreeToggle<CR>', { desc = 'Undotree' })
 
 vim.keymap.set('n', '<leader>gg', ':Neogit<CR>', { desc = 'Neogit' })
+
+vim.keymap.set('n', '<leader>dc', ':DiffviewClose<CR>', { desc = 'Close Diffview' })
