@@ -19,31 +19,54 @@ set $term alacritty
 set $fileManager nautilus --new-window
 set $browser google-chrome
 set $music spotify
-set $menu wofi --show drun | xargs swaymsg exec --
+set $menu wofi --show drun --sort-order=alphabetical
 # NOTE: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 
 include /etc/sway/config-vars.d/*
 
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
+# Auto-start essential services
+include /home/vcardoso/.config/sway/autostart
+include /home/vcardoso/.config/sway/binds
+
+## ThinkPad function keys
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessUp exec light -A 10 && light -O
+bindsym XF86MonBrightnessDown exec light -U 10 && light -O
+bindsym XF86Display exec wdisplays
+
+# System control bindings
+# bindsym $mod+
+
+# Touchpad configuration
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
+    dwt enabled
+    accel_profile adaptive
+    pointer_accel 0.3
+}
+
+# ThinkPad TrackPoint
+input type:pointer {
+    accel_profile adaptive
+    pointer_accel 0.5
+}
+
+# Display configuration (adjust based on your model)
+output eDP-1 {
+    mode 1920x1080@60Hz
+    scale 1
+    bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+}
 
 ### Idle configuration
 #
 # Example configuration:
 #
- exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
-          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-          before-sleep 'swaylock -f -c 000000'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -61,7 +84,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #   }
     input * {
         xkb_layout 'br'
-        xkb_options 'caps:swapescape,compose:rctrl'
+        xkb_options 'caps:swapescape'
         natural_scroll enabled
 
     }
@@ -72,23 +95,6 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Basics:
 #
-    # kill current window
-    bindsym $mod+w kill
-
-    # terminal
-    bindsym $mod+Return exec $term
-
-    # wofi app launcher
-    bindsym $mod+Space exec $menu
-
-    # spotify
-    bindsym $mod+m exec $music
-
-    # browser
-    bindsym $mod+b exec $browser
-
-    # file manager
-    bindsym $mod+f exec $fileManager
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -96,6 +102,10 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
     floating_modifier $mod normal
+
+    # Screenshots
+    bindsym Print exec grim ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
+    bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
@@ -157,9 +167,9 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Layout stuff:
 #
     # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
+    # $mod+p or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+j splith
+    bindsym $mod+p splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
@@ -195,9 +205,6 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 mode "resize" {
     # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
     bindsym $left resize shrink width 10px
     bindsym $down resize grow height 10px
     bindsym $up resize shrink height 10px
@@ -220,17 +227,12 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
+    swaybar_command waybar
     position top
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 }
 
 include /etc/sway/config.d/*

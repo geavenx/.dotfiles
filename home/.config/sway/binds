@@ -1,0 +1,15 @@
+# Power/Lock management
+bindsym $mod+Ctrl+Escape exec reboot
+bindsym $mod+Escape exec swaylock -f -c 000000
+bindsym $mod+Shift+Escape exec systemctl suspend
+bindsym $mod+Shift+Ctrl+Escape exec systemctl poweroff
+
+# kill current window
+bindsym $mod+w kill
+
+# Quick launch common applications
+bindsym $mod+Return exec $term
+bindsym $mod+Space exec $menu
+bindsym $mod+m exec $music
+bindsym $mod+b exec $browser
+bindsym $mod+f exec $fileManager
