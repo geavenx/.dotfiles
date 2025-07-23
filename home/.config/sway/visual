@@ -1,0 +1,29 @@
+# Gaps
+gaps inner 5
+gaps outer 10
+
+# Borders
+default_border pixel 2
+default_floating_border pixel 2
+
+# Colors (Sway doesn't support gradients, using the first color from your gradient)
+# class                 border  bground text    indicator child_border
+client.focused          #a89984 #a89984 #ffffff #a89984   #a89984
+client.focused_inactive #595959 #595959 #ffffff #595959   #595959
+client.unfocused        #595959 #595959 #888888 #595959   #595959
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+# Tiling behavior (closest to dwindle's force_split = 2)
+default_orientation horizontal
+
+# Window focus follows mouse (similar to Hyprland's behavior)
+focus_follows_mouse yes
+
+# Disable window titlebars (since you had rounding = 0, assuming minimal decoration)
+for_window [class=".*"] border pixel 2
+
+# Smart gaps - disable gaps when only one window is visible
+# (equivalent to the commented workspace rules in your Hyprland config)
+smart_gaps on
+smart_borders on
