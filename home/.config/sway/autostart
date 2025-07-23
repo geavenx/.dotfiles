@@ -1,12 +1,15 @@
 exec mako
+exec /home/vcardoso/.config/scripts/battery-notifier
 exec nm-applet --indicator
 exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec blueman-applet
 exec mako
 exec light -N 5
 exec light -I
+
 exec swayidle -w \
          timeout 300 'swaylock -f -c 000000' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
          before-sleep 'swaylock -f -c 000000'
+
 exec wl-clip-persist & clipse -listen

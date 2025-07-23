@@ -1,0 +1,11 @@
+#!/bin/bash
+
+while true; do
+	battery_lvl=$(cat /sys/class/power_supply/BAT0/capacity)
+	if [ "$battery_lvl" -le 20 ]; then
+		notify-send --urgency=CRITICAL "Battery Low" "level: ${battery_lvl}%"
+		sleep 600
+	else
+		sleep 120
+	fi
+done
