@@ -12,7 +12,9 @@ alias wk="cd $HOME/work"
 alias containerip='docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}''
 
 # Pyenv
-alias usevenv='pyenv activate $(basename "$PWD")'
+alias venv='pyenv activate $(basename "$PWD")'
+alias nvenv="pyenv virtualenv $(python --version | awk '{print $2}') $(basename $(pwd))"
+alias qvenv='pyenv deactivate'
 
 # fdfind
 alias fd='fdfind'
