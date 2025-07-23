@@ -18,6 +18,11 @@ alias containerip='docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAdd
 alias shutdown='systemctl poweroff'
 alias reboot='systemctl reboot'
 
+# pyenv
+alias venv='pyenv activate $(basename $(pwd))'
+alias nvenv="pyenv virtualenv $(python --version | awk '{print $2}') $(basename $(pwd))"
+alias qvenv='pyenv deactivate'
+
 # git
 alias gss='git status -s'
 alias gc='git commit -v'
