@@ -1,6 +1,9 @@
 # zsh envvars
 export EDITOR=nvim
-export PATH="$HOME/.local/bin:$HOME/.config/scripts:$PATH"
+
+BUN_INSTALL="$HOME/.bun"
+
+export PATH="$HOME/.local/bin:$HOME/.config/scripts:$HOME/.cargo/bin:$BUN_INSTALL/bin:$PATH"
 
 # XDG envvars
 export XDG_CACHE_HOME="$HOME/.cache"

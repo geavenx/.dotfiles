@@ -42,3 +42,6 @@ eval "$(starship init zsh)"
 # starship end
 
 #. "$HOME/.local/share/../bin/env"
+
+# bun completions
+[ -s "/home/vitor/.bun/_bun" ] && source "/home/vitor/.bun/_bun"
